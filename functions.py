@@ -26,5 +26,13 @@ def count_bits(n):
                 num_of_ones += 1
         return num_of_ones
 
-num = count_bits(0)
+num = count_bits(10)
+print(num)
+
+
+
+# Alternatively
+def count_bits(n):
+    return bin(n).count('1') # bin() coverts an int to binary while count() returns the total count of a given element
+num = count_bits(1001)
 print(num)
