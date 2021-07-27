@@ -41,15 +41,52 @@ A pangram is a sentence that contains every single letter of the alphabet at lea
 Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
 
 '''
-import string
-def is_pangram(str):
-    alphabet = string.ascii_lowercase
-    for char in alphabet:
-        if char not in str.lower():
-            return False
-    return True
+# import string
+# def is_pangram(str):
+#     alphabet = string.ascii_lowercase
+#     for char in alphabet:
+#         if char not in str.lower():
+#             return False
+#     return True
 
 
-ans = is_pangram("This isn't a pangram!")
+# ans = is_pangram("This isn't a pangram!")
 
-print(ans)
+# print(ans)
+
+
+'''
+In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+Example:
+
+high_and_low("1 2 3 4 5")  # return "5 1"
+high_and_low("1 2 -3 4 5") # return "5 -3"
+high_and_low("1 9 3 4 -5") # return "9 -5"
+
+Notes:
+All numbers are valid Int32, no need to validate them.
+There will always be at least one number in the input string.
+Output string must be two numbers separated by a single space, and highest number is first.
+
+'''
+
+
+def high_and_low(numbers):  # z.
+    nn = [int(s) for s in numbers.split(" ")]
+    print(nn)
+    print(numbers.split())
+    return "%i %i" % (max(nn), min(nn))
+
+
+print(high_and_low('1 2 -3 4 -5'))
+
+# alternatively.
+
+def high_and_low(numbers):
+    n = list(map(int, numbers.split(' ')))
+    print(n)
+    return str(max(n)) + ' ' + str(min(n))
+
+
+print(high_and_low('1 2 -3 4 -5'))
