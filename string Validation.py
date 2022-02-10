@@ -1,0 +1,12 @@
+if __name__ == "__main__":
+    s = input()
+    isDig = any(s.isdigit() for s in s)
+    isAlpha = any(s.isalpha() for s in s)
+    isAlNum = any(s.isalnum() for s in s)
+    isLower = any(s.islower() for s in s)
+    isUpper = any(s.isupper() for s in s)
+    print(isAlNum)
+    print(isAlpha)
+    print(isDig)
+    print(isLower)
+    print(isUpper)
